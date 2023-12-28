@@ -1,0 +1,15 @@
+
+- ARRAYS
+   Pros:
+    1. Fast lookups
+    2. Fast push and pop
+    3. Ordered
+
+   Cons:
+    1. Insert and Delete 
+    2. fixed size for static arrays
+
+
+
+
+
