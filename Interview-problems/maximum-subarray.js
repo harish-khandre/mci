@@ -22,3 +22,13 @@ const maxSubArray = (nums) => {
   }
   return max;
 };
+
+// faster method
+const maxSubArray2 = (nums) => {
+  let max = nums[0];
+  for (let i = 1; i < nums.length; i++) {
+    nums[i] = Math.max(nums[i], nums[i] + nums[i - 1]);
+    max = Math.max(nums[i], max);
+  }
+  return max;
+};
