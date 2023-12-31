@@ -20,6 +20,7 @@ const threeSum = (nums) => {
   const sorted = [...nums].sort((a, b) => a - b);
 
   for (let i = 0; i < sorted.length; i += 1) {
+    // below statement helps to skip the duplicates of the array
     if (i > 0 && sorted[i] === sorted[i - 1]) continue;
 
     let l = i + 1;
@@ -32,6 +33,7 @@ const threeSum = (nums) => {
       else {
         res.push([sorted[i], sorted[l], sorted[r]]);
         l += 1;
+        // if duplicate l we push ++ as we dont need them and for the right duplicates we get skipped so we have to take care of only one side of duplicates bcuz of the loop and 👇 here we took it
         while (sorted[l] === sorted[l - 1] && l < r) l += 1;
       }
     }
