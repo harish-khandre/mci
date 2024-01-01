@@ -13,9 +13,14 @@ const reorderList = (head) => {
   let prev = null;
 
   while (current) {
+    // let link = a-b-c-d
+    // stroing the value of b
     let temp = current.next;
+    // pointing a to null instead of b
     current.next = prev;
+    // b is head/current now
     prev = current;
+    // b is temp now and loop continues
     current = temp;
   }
 
