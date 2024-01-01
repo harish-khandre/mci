@@ -20,6 +20,14 @@
     1. Unordered 
     2. Slow key iteration
 
+- Linked List
+    Pros: 
+     1. Fast insertion and deletion
+     2. Ordered
+     3. Flexible size
 
+    Cons:
+      1. Slow lookups
+      2. More memory 
 
 
