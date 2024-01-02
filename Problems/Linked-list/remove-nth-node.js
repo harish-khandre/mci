@@ -5,7 +5,7 @@ Input: head = [1,2,3,4,5], n = 2
 Output: [1,2,3,5] */
 
 const removeNthFromEnd = (head, n) => {
-  let dummy = new ListNode(0);
+  const dummy = new ListNode(0);
   dummy.next = head;
 
   let left = dummy;

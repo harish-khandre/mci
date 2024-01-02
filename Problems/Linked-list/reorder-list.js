@@ -28,7 +28,7 @@ const reorderList = (head) => {
   while (current) {
     // let link = a-b-c-d
     // stroing the value of b
-    let temp = current.next;
+    const temp = current.next;
     // pointing a to null instead of b
     current.next = prev;
     // b is head/current now
