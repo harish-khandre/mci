@@ -7,11 +7,11 @@ Input: head = [1,2,3,4,5], k = 2
 Output: [2,1,4,3,5] */
 
 const reverseKGroup = (head, k) => {
-  // Count the number of List Nodes
+  // Count the number of ListNodes
   let n = 0;
   for (let i = head; i != null; n++, i = i.next);
 
-  // Create a dummy Linked List
+  // Create a dummy LinkedList
   const dummy = new ListNode(0);
   dummy.next = head;
 
