@@ -7,7 +7,6 @@ class LRUCache {
 
   get(key) {
     if (!this.cache.has(key)) return -1;
-
     // Update the order to mark it as most recently used
     const node = this.cache.get(key);
     this.ordering.moveToFront(node);
