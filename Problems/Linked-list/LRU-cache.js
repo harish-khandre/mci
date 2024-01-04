@@ -1,35 +1,35 @@
 class LRUCache {
   constructor(capacity) {
     this.capacity = capacity;
-    this.cache = new Map();
-    this.ordering = new DoublyLinkedList();
+    this.map = new Map();
+    this.doublyLinkedList = new DoublyLinkedList();
   }
 
   get(key) {
-    if (!this.cache.has(key)) return -1;
+    if (!this.map.has(key)) return -1;
     // Update the order to mark it as most recently used
-    const node = this.cache.get(key);
-    this.ordering.moveToFront(node);
+    const node = this.map.get(key);
+    this.doublyLinkedList.moveToFront(node);
 
     return node.value;
   }
 
   put(key, value) {
-    if (this.cache.has(key)) {
+    if (this.map.has(key)) {
       // If key exists, update the value and move the node to the front
-      const node = this.cache.get(key);
+      const node = this.map.get(key);
       node.value = value;
-      this.ordering.moveToFront(node);
+      this.doublyLinkedList.moveToFront(node);
     } else {
-      // If the cache is at full capacity, remove the least recently used node
-      if (this.cache.size >= this.capacity) {
-        const lruNode = this.ordering.popBack();
-        this.cache.delete(lruNode.key);
+      // If the map is at full capacity, remove the least recently used node
+      if (this.map.size >= this.capacity) {
+        const lruNode = this.doublyLinkedList.popBack();
+        this.map.delete(lruNode.key);
       }
 
-      // Add the new key-value pair and the corresponding node to the cache and ordering
-      const newNode = this.ordering.addToFront(key, value);
-      this.cache.set(key, newNode);
+      // Add the new key-value pair and the corresponding node to the map and doublyLinkedList
+      const newNode = this.doublyLinkedList.addToFront(key, value);
+      this.map.set(key, newNode);
     }
   }
 }
