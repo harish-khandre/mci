@@ -30,4 +30,11 @@
       1. Slow lookups
       2. More memory 
 
+- Stack + Queue
+    Pros:
+     1. Fast operations
+     2. Fast peek
+     3. Ordered
 
+    Cons:
+     1. Slow lookups
