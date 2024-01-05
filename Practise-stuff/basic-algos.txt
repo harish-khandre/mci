@@ -1,0 +1,5 @@
+tortoise algo:
+https://dev.to/alisabaj/floyd-s-tortoise-and-hare-algorithm-finding-a-cycle-in-a-linked-list-39af
+
+flyod algo:
+https://dev.to/riju457/floyd-warshall-algorithm-1fa8
