@@ -1,23 +1,15 @@
 const carFleet = (target, position, speed) => {
-  const n = position.length;
-  const inds = [];
-  for (let i = 0; i < n; i++) inds.push(i);
-
-  inds.sort((a, b) => position[b] - position[a]);
-
-  let cur = inds[0];
-  let result = 1;
-
-  for (let i = 1; i < n; i++) {
-    const idx = inds[i];
-    if (
-      (target - position[idx]) * speed[cur] >
-      (target - position[cur]) * speed[idx]
-    ) {
-      result++;
-      cur = idx;
+  const timeArr = new Array(target).fill(0);
+  for (let i = 0; i < position.length; i++) {
+    timeArr[position[i]] = (target - position[i]) / speed[i];
+  }
+  let fleets = 0;
+  let prevTime = 0;
+  for (let i = timeArr.length - 1; i >= 0; i--) {
+    if (timeArr[i] > prevTime) {
+      fleets++;
+      prevTime = timeArr[i];
     }
   }
-
-  return result;
+  return fleets;
 };
