@@ -3,41 +3,42 @@
 class Node {
   constructor(value) {
     this.value = value;
-    this.next = null;
+    this.prev = null;
   }
 }
 
 class Stack {
   constructor() {
-    this.top = null;
-    this.bottom = null;
+    this.head = null;
+    this.tail = null;
     this.length = 0;
   }
   peek() {
-    return this.top;
+    return this.head;
   }
   push(value) {
     const newNode = new Node(value);
     if (this.length === 0) {
-      this.top = newNode;
-      this.bottom = newNode;
+      this.head = newNode;
+      this.tail = newNode;
     } else {
-      const holdingPointer = this.top;
-      this.top = newNode;
-      this.top.next = holdingPointer;
+      const holdingPointer = this.head;
+      this.head = newNode;
+      this.head.prev = holdingPointer;
+      // prev because stack is LIFO
     }
     this.length++;
     return this;
   }
   pop() {
-    if (!this.top) {
+    if (!this.head) {
       return null;
     }
-    if (this.top === this.bottom) {
-      this.bottom = null;
+    if (this.head === this.tail) {
+      this.tail = null;
     }
-    // const holdingPointer = this.top;
-    this.top = this.top.next;
+    // const holdingPointer = this.head;
+    this.head = this.head.prev;
     this.length--;
     return this;
   }

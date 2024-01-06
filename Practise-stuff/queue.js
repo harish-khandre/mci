@@ -9,33 +9,33 @@ class Node {
 
 class Queue {
   constructor() {
-    this.first = null;
-    this.last = null;
+    this.head = null;
+    this.tail = null;
     this.length = 0;
   }
   peek() {
-    return this.first;
+    return this.head; // or this.head?.value
   }
   enqueue(value) {
     const newNode = new Node(value);
     if (this.length === 0) {
-      this.first = newNode;
-      this.last = newNode;
+      this.head = newNode;
+      this.tail = newNode;
     } else {
-      this.last.next = newNode;
-      this.last = newNode;
+      this.tail.next = newNode;
+      this.tail = newNode;
     }
     this.length++;
     return this;
   }
   dequeue() {
-    if (!this.first) {
+    if (!this.head) {
       return null;
     }
-    if (this.first === this.last) {
-      this.last = null;
+    if (this.head === this.tail) {
+      this.tail = null;
     }
-    this.first = this.first.next;
+    this.head = this.head.next;
     this.length--;
     return this;
   }

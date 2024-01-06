@@ -38,3 +38,7 @@
 
     Cons:
      1. Slow lookups
+
+    Linked list:
+    Stack is LIFO (Last in first out) a --> b --> c --> d
+    Queue is FIFO (First in first out)  a <-- b <-- c <-- d
