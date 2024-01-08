@@ -42,3 +42,16 @@
     Linked list:
     Stack is LIFO (Last in first out) a --> b --> c --> d
     Queue is FIFO (First in first out)  a <-- b <-- c <-- d
+
+- Trees
+    Pros: 
+     1. Better than O(n)
+     2. Ordered
+     3. Flexible Size
+    
+    Cons:
+     1. No O(1) operations
+
+    Balanced Trees are best and gives O(log n) operations 
+    Unbalanced trees are bad and gives O(n) operations
+    
