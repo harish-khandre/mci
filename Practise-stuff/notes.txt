@@ -1,57 +1,69 @@
 
 - ARRAYS
-   Pros:
-    1. Fast lookups
-    2. Fast push and pop
-    3. Ordered
+Pros:
+1. Fast lookups
+2. Fast push and pop
+3. Ordered
 
-   Cons:
-    1. Insert and Delete 
-    2. fixed size for static arrays
+Cons:
+1. Insert and Delete 
+2. fixed size for static arrays
 
 
 - Hash table {map or set}
-   Pros:
-    1. Fast lookups
-    2. Fast Inserts
-    3. Flexible keys
+Pros:
+1. Fast lookups
+2. Fast Inserts
+3. Flexible keys
 
-   Cons:
-    1. Unordered 
-    2. Slow key iteration
+Cons:
+1. Unordered 
+2. Slow key iteration
 
 - Linked List
-    Pros: 
-     1. Fast insertion and deletion
-     2. Ordered
-     3. Flexible size
+Pros: 
+1. Fast insertion and deletion
+2. Ordered
+3. Flexible size
 
-    Cons:
-      1. Slow lookups
-      2. More memory 
+Cons:
+1. Slow lookups
+2. More memory 
 
 - Stack + Queue
-    Pros:
-     1. Fast operations
-     2. Fast peek
-     3. Ordered
+Pros:
+1. Fast operations
+2. Fast peek
+3. Ordered
 
-    Cons:
-     1. Slow lookups
+Cons:
+1. Slow lookups
 
-    Linked list:
-    Stack is LIFO (Last in first out) a --> b --> c --> d
-    Queue is FIFO (First in first out)  a <-- b <-- c <-- d
+Linked list:
+Stack is LIFO (Last in first out) a --> b --> c --> d
+Queue is FIFO (First in first out)  a <-- b <-- c <-- d
 
 - Trees
+ - Binary tree 
     Pros: 
-     1. Better than O(n)
-     2. Ordered
-     3. Flexible Size
-    
+    1. Better than O(n)
+    2. Ordered
+    3. Flexible Size
+
     Cons:
-     1. No O(1) operations
+    1. No O(1) operations
 
     Balanced Trees are best and gives O(log n) operations 
     Unbalanced trees are bad and gives O(n) operations
-    
+
+ - Binary Heap 
+    Pros:
+    1. Better than O(n)
+    2. Priority
+    3. Flexible Size
+    4. Fast Insert
+
+    Cons:
+    1. Slow Lookup
+
+
