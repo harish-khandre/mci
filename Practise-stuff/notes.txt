@@ -55,6 +55,9 @@ Queue is FIFO (First in first out)  a <-- b <-- c <-- d
 
     Balanced Trees are best and gives O(log n) operations 
     Unbalanced trees are bad and gives O(n) operations
+    
+    If you find a lot and insert not often AVL tree and vice versa
+    for red black tree
 
  - Binary Heap 
     Pros:
@@ -65,5 +68,4 @@ Queue is FIFO (First in first out)  a <-- b <-- c <-- d
 
     Cons:
     1. Slow Lookup
-
 
