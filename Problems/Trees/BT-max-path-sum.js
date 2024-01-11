@@ -18,7 +18,7 @@ const maxPathSum = (root) => {
 
     // Update the result (res[0]) with the maximum path sum considering the current node
     res[0] = Math.max(res[0], root.val + leftMax + rightMax);
-
+    //we are finding the node which has max value and then getting that nodes path and checking it
     // Return the maximum path sum considering the current node and one of its subtrees
     return root.val + Math.max(leftMax, rightMax);
   };
