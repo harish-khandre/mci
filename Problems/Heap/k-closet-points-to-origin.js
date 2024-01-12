@@ -1,3 +1,8 @@
+/**
+ * @param {number[][]} points
+ * @param {number} K
+ * @return {number[][]}
+ */
 /*
 sort approach:
 - need to compute all distances, we can just omit the sqrt and just do x^2 + y^2
@@ -6,7 +11,7 @@ sort approach:
 runtime: O(N log(N))
 space: O(1)
 */
-const kClosest = (points, K) => {
+var kClosest = function (points, K) {
   points.sort(
     (a, b) => a[0] * a[0] + a[1] * a[1] - (b[0] * b[0] + b[1] * b[1]),
   );
@@ -22,17 +27,15 @@ then we remove k times from the heap -> k * log(n) (need to heapify down on each
 runtime: O(N + k log (N))
 space: O(1) since we are doing it in place
 */
-
-// biome-ignore lint/suspicious/noRedeclare: <explanation>
-const kClosest = (points, k) => {
+var kClosest = function (points, k) {
   // we can build the heap in place
-  const p = Math.floor((points.length - 2) / 2); // last parent
+  let p = Math.floor((points.length - 2) / 2); // last parent
   for (let i = p; i >= 0; i--) {
     heapifyDown(points, i, distance);
   }
 
   // now we need to remove the smallest (points[0]) k times
-  const solution = [];
+  let solution = [];
   for (let i = 0; i < k; i++) {
     solution.push(remove(points, distance));
   }
@@ -41,7 +44,7 @@ const kClosest = (points, k) => {
 
   // read 0, replace 0 with last position, heapifyDown
   function remove(heap, weightFunction) {
-    const val = heap[0];
+    let val = heap[0];
     heap[0] = heap.pop();
     heapifyDown(heap, 0, weightFunction);
     return val;
@@ -49,8 +52,8 @@ const kClosest = (points, k) => {
 
   // compare with children, swap with smallest, repeat
   function heapifyDown(heap, idx, weightFunction) {
-    const left = 2 * idx + 1;
-    const right = 2 * idx + 2;
+    let left = 2 * idx + 1;
+    let right = 2 * idx + 2;
     let smallest = left;
 
     if (left >= heap.length) return;
@@ -81,10 +84,8 @@ for this case we would need to implement heapify up (insert) and heapify down (r
 runtime: O(N log(k))
 space: O(k)
 */
-
-// biome-ignore lint/suspicious/noRedeclare: <explanation>
-const kClosest = (points, k) => {
-  const heap = [];
+var kClosest = function (points, k) {
+  let heap = [];
 
   // now we need to try to add all points to the heap
   for (let i = 0; i < points.length; i++) {
@@ -109,7 +110,7 @@ const kClosest = (points, k) => {
   // compare with parent and swap if needed, repeat
   function heapifyUp(heap, idx, weightFunction) {
     if (idx === 0) return;
-    const parent = Math.floor((idx - 1) / 2);
+    let parent = Math.floor((idx - 1) / 2);
     if (weightFunction(heap[idx]) > weightFunction(heap[parent])) {
       [heap[idx], heap[parent]] = [heap[parent], heap[idx]];
       heapifyUp(heap, parent, weightFunction);
@@ -118,7 +119,7 @@ const kClosest = (points, k) => {
 
   // read 0, replace 0 with last position, heapifyDown
   function remove(heap, weightFunction) {
-    const val = heap[0];
+    let val = heap[0];
     heap[0] = heap.pop();
     heapifyDown(heap, 0, weightFunction);
     return val;
@@ -126,8 +127,8 @@ const kClosest = (points, k) => {
 
   // compare with children, swap with biggest, repeat
   function heapifyDown(heap, idx, weightFunction) {
-    const left = 2 * idx + 1;
-    const right = 2 * idx + 2;
+    let left = 2 * idx + 1;
+    let right = 2 * idx + 2;
     let biggest = left;
 
     if (left >= heap.length) return;
