@@ -59,6 +59,12 @@ Queue is FIFO (First in first out)  a <-- b <-- c <-- d
     If you find a lot and insert not often AVL tree and vice versa
     for red black tree
 
+    In order => Left, Root, Right.
+
+    Pre-order => Root, Left, Right.
+
+    Post order => Left, Right, Root.
+
  - Binary Heap 
     Pros:
     1. Better than O(n)
