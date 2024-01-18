@@ -75,3 +75,31 @@ Queue is FIFO (First in first out)  a <-- b <-- c <-- d
     Cons:
     1. Slow Lookup
 
+ - Graph
+    Pros: 
+    1. Relationships
+
+    Cons:
+    2. Scaling is hard
+
+    Directed graphs shows direction of their relations
+
+    Cyclic graphs are cyclic as they are continuous 
+
+    Weighted graphs shows the weight of data for the actions like google map
+    is weighted graph and calculates the direction based on the weight of
+    the graph
+    
+    Connected graphs are connected to every other node
+
+    Dag: directed acyclic graph => [[a, d], [b, a], [b, c], [d, c]]
+ 
+    Vice versa for each graph
+
+    Node is referred vertex in graph
+    Edge is connection between two vertex
+
+    The way they are represented is adjacent list and adjacent matrix
+    adjacent list: [{ to: 1, w: 10}, { to: 2, w:20}] 
+                      (^this is index 0)
+    and for matrix just google it or https://frontendmasters.com/courses/algorithms/searching-an-adjacency-matrix/
