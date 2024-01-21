@@ -132,6 +132,7 @@ array1	Problems/Arrays/comman-item.js	/^const array1 = ['a', 'b', 'c', 'x'];$/;"
 array2	Problems/Arrays/comman-item.js	/^const array2 = ['z', 'y', 'a'];$/;"	v
 arrayOfHiNTimes	Practise-stuff/Big-O/space-complexity.js	/^function arrayOfHiNTimes(n) {$/;"	f
 arrayStack	Practise-stuff/Implementations/stack.js	/^class arrayStack {$/;"	c
+atlantic	Problems/Graph/pacific-altnatic-water-flow.js	/^  const atlantic = Array.from(Array(rows), () => Array(cols).fill(false));$/;"	C
 b	Problems/Stack/evaluate-reverse-polish-notation.js	/^      const b = stack.pop();$/;"	C
 backTrack	Problems/Backtracking/later-combo-of-a-phone-number.js	/^const backTrack = (digits, char, combination, combinations) => {$/;"	f
 backtrack	Problems/Backtracking/palindrome-partitioning.js	/^  const backtrack = (startIdx) => {$/;"	f
@@ -160,6 +161,7 @@ cnt	Problems/Heap/task-scheduler.js	/^      const cnt = maxHeap.getMax() - 1;$/;
 col	Problems/Arrays/valid-soduku.js	/^    const col = new Set();$/;"	C
 col	Problems/Graph/number-of-islands.js	/^      const [row, col] = queue.dequeue();$/;"	C
 cols	Problems/Graph/number-of-islands.js	/^  const [rows, cols] = [grid.length, grid[0].length];$/;"	v
+cols	Problems/Graph/pacific-altnatic-water-flow.js	/^  const cols = heights[0].length;$/;"	C
 combinationSum	Problems/Backtracking/combination-sum.js	/^const combinationSum = (candidates, target) => {$/;"	f
 combinationSum2	Problems/Backtracking/combination-sum-II.js	/^const combinationSum2 = (candidates, target) => {$/;"	f
 compressBoxesTwice	Practise-stuff/Big-O/o(n^2).js	/^function compressBoxesTwice(boxes, boxes2) {$/;"	f
@@ -235,6 +237,7 @@ dfs	Problems/Backtracking/subsets.js	/^  function dfs(index, currentSubset) {$/;
 dfs	Problems/Backtracking/word-search.js	/^  const dfs = (row, col, index) => {$/;"	f
 dfs	Problems/Graph/clone-graph.js	/^  function dfs(node) {$/;"	f
 dfs	Problems/Graph/max-area-of-islands.js	/^  const dfs = (row, col) => {$/;"	f
+dfs	Problems/Graph/pacific-altnatic-water-flow.js	/^  const dfs = (r, c, ocean) => {$/;"	f
 dfs	Problems/Trees/BT-max-path-sum.js	/^  const dfs = (root) => {$/;"	f
 dfs	Problems/Trees/count-good-nodes-in-BT.js	/^  const dfs = (node, max) => {$/;"	f
 dfs	Problems/Trie/design-add&search-words.js	/^	dfs(word, node, level) {$/;"	m	class:WordDictionary
@@ -243,6 +246,7 @@ diameterOfBinaryTree	Problems/Trees/diameter-of-BT.js	/^const diameterOfBinaryTr
 diff	Problems/Heap/last-stone-weight.js	/^      const diff = stones[0] - stones[nextMaxIndex];$/;"	C
 diff	Problems/Heap/last-stone-weight.js	/^    const diff = heap.dequeue().element - heap.dequeue().element;$/;"	C
 dir	Practise-stuff/maze-solver.ts	/^const dir = [$/;"	C
+directions	Problems/Graph/pacific-altnatic-water-flow.js	/^  const directions = [$/;"	v
 directions	Problems/Trie/word-search-2.js	/^		const directions = [$/;"	v
 distance	Problems/Heap/k-closet-points-to-origin.js	/^  function distance(point) {$/;"	f
 dummy	Problems/Linked-list/merge-k-sorted-lists.js	/^  let dummy = new ListNode(0);$/;"	v
@@ -307,6 +311,7 @@ heapifyUp	Problems/Heap/design-twitter.js	/^function heapifyUp(heap, i) {$/;"	f
 heapifyUp	Problems/Heap/find-median-from-data-stream.js	/^  heapifyUp() {$/;"	m	class:MaxHeap
 heapifyUp	Problems/Heap/find-median-from-data-stream.js	/^  heapifyUp() {$/;"	m	class:MinHeap
 heapifyUp	Problems/Heap/k-closet-points-to-origin.js	/^  function heapifyUp(heap, idx, weightFunction) {$/;"	f
+heights	Problems/Graph/pacific-altnatic-water-flow.js	/^const heights = [$/;"	v
 highest	Problems/Heap/last-stone-weight.js	/^  let highest = i;$/;"	v
 hl	Problems/Trees/balanced-BT.js	/^  const hl = isBalanced(root.left);$/;"	C
 hr	Problems/Trees/balanced-BT.js	/^  const hr = isBalanced(root.right);$/;"	C
@@ -436,6 +441,7 @@ n	Problems/Backtracking/word-search.js	/^  const n = board[0].length;$/;"	C
 n	Problems/Linked-list/reverse-nodes-in-k-group.js	/^  let n = 0;$/;"	v
 n	Problems/Trie/word-search-2.js	/^	const n = board[0].length;$/;"	C
 negDiagIndex	Problems/Backtracking/n-queens.js	/^    const negDiagIndex = row - col + n - 1;$/;"	C
+newCol	Problems/Graph/pacific-altnatic-water-flow.js	/^      const newCol = c + dc;$/;"	C
 newNode	Practise-stuff/Implementations/doubly-linked-list.js	/^    const newNode = {$/;"	v	method:DoublyLinkedList.append
 newNode	Practise-stuff/Implementations/doubly-linked-list.js	/^    const newNode = {$/;"	v	method:DoublyLinkedList.insert
 newNode	Practise-stuff/Implementations/doubly-linked-list.js	/^    const newNode = {$/;"	v	method:DoublyLinkedList.prepend
@@ -443,6 +449,7 @@ newNode	Practise-stuff/Implementations/linked-list.js	/^    const newNode = {$/;
 newNode	Practise-stuff/Implementations/linked-list.js	/^    const newNode = {$/;"	v	method:LinkedList.insert
 newNode	Practise-stuff/Implementations/linked-list.js	/^    const newNode = {$/;"	v	method:LinkedList.prepend
 newNode	Problems/Linked-list/copy-list-with-random-pointers.js	/^    const newNode = new Node(node.val);$/;"	C
+newRow	Problems/Graph/pacific-altnatic-water-flow.js	/^      const newRow = r + dr;$/;"	C
 newX	Problems/Trie/word-search-2.js	/^			const newX = x + dx;$/;"	C
 newY	Problems/Trie/word-search-2.js	/^			const newY = y + dy;$/;"	C
 next	Practise-stuff/Implementations/doubly-linked-list.js	/^      next: null,$/;"	p	property:DoublyLinkedList.constructor.head
@@ -467,6 +474,8 @@ output	Problems/Backtracking/subset-II.js	/^  const output = [];$/;"	v
 p	Practise-stuff/Implementations/min-heap.ts	/^    const p = this.parent(idx);$/;"	C	method:MinHeap.heapifyUp
 p	Practise-stuff/Implementations/min-heap.ts	/^    const parentV = this.data[p];$/;"	C	method:MinHeap.heapifyUp
 p	Problems/Heap/k-closet-points-to-origin.js	/^  const p = Math.floor((points.length - 2) \/ 2); \/\/ last parent$/;"	C
+pacific	Problems/Graph/pacific-altnatic-water-flow.js	/^  const pacific = Array.from(Array(rows), () => Array(cols).fill(false));$/;"	C
+pacificAtlantic	Problems/Graph/pacific-altnatic-water-flow.js	/^const pacificAtlantic = (heights) => {$/;"	f
 parent	Practise-stuff/Implementations/min-heap.ts	/^  private parent(idx: number): number {$/;"	m	class:MinHeap
 parentV	Practise-stuff/Implementations/min-heap.ts	/^    const parentV = this.data[p];$/;"	C	method:MinHeap.heapifyUp
 partition	Problems/Backtracking/palindrome-partitioning.js	/^const partition = (s) => {$/;"	f
@@ -554,6 +563,7 @@ result	Problems/Backtracking/palindrome-partitioning.js	/^  const result = [];$/
 result	Problems/Backtracking/permutation.js	/^  const result = [];$/;"	v
 result	Problems/Backtracking/subsets.js	/^  const result = [[]];$/;"	v
 result	Problems/Backtracking/word-search.js	/^    const result =$/;"	C
+result	Problems/Graph/pacific-altnatic-water-flow.js	/^  const result = [];$/;"	v
 result	Problems/Trees/Kth-smallest-element-in-BST.js	/^  const result = [];$/;"	v
 result	Problems/Trie/word-search-2.js	/^	const result = []; \/\/ Array to store the found words$/;"	v
 rev	Problems/Two-pointers/valid-palindrome.js	/^  const rev = str.split("").reverse().join("");$/;"	C
@@ -581,6 +591,7 @@ root_val	Problems/Trees/construct-BT-from-preorder-&-inorder.js	/^    const root
 rotate	Problems/Arrays/rotate-array.js	/^const rotate = (nums, k) => {$/;"	f
 row	Problems/Arrays/valid-soduku.js	/^    const row = new Set();$/;"	C
 rows	Problems/Backtracking/n-queens.js	/^    const rows = board.map((_row) => _row.join(""));$/;"	C
+rows	Problems/Graph/pacific-altnatic-water-flow.js	/^  const rows = heights.length;$/;"	C
 search	Practise-stuff/Implementations/depth-first-search.ts	/^function search(curr: BinaryNode<number> | null, needle: number): boolean {$/;"	f
 search	Practise-stuff/Implementations/trie.js	/^  search(word) {$/;"	m	class:Trie
 search	Problems/Trie/design-add&search-words.js	/^	search(word) {$/;"	m	class:WordDictionary
