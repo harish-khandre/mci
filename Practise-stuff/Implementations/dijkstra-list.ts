@@ -61,7 +61,12 @@ export default function dijkstraList(
       }
     }
   }
-
-  // Returning the calculated distances array or any other result you need
-  return dists;
+  const out: number[] = [];
+  let curr = sink;
+  while (prev[curr] !== -1) {
+    out.push(curr);
+    curr = prev[curr];
+  }
+  out.push(source);
+  return out.reverse();
 }
