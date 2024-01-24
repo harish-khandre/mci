@@ -11,6 +11,7 @@ function walk(
   curr: Point,
   end: Point,
   seen: boolean[][],
+  path: Point[],
 ): boolean {
   // base case : Off the map
   if (
@@ -70,7 +71,7 @@ export default function solve(
   const seen: boolean[][] = [];
   const path: Point[] = [];
 
-  for (let index = 0; index < array.length; index++) {
+  for (let index = 0; index < maze.length; index++) {
     seen.push(new Array(maze[0].length).fill(false));
   }
   walk(maze, wall, start, end, seen, path);
