@@ -1,5 +1,4 @@
 // Function to perform a depth-first search (DFS) on a weighted graph
-// Returns true if a path from 'curr' to 'needle' is found, false otherwise
 function walk(
   graph: WeightedAdjacencyList, // Weighted adjacency list representing the graph
   curr: number, // Current node in the traversal

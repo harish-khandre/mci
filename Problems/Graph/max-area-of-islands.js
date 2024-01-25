@@ -39,13 +39,11 @@ const maxAreaOfIsland = (grid) => {
       if (grid[i][j] === 1) {
         // Calculate the area of the island starting from this cell using DFS
         const area = dfs(i, j);
-
         // Update the maximum area if the current island's area is greater
         maxArea = Math.max(maxArea, area);
       }
     }
   }
-
   // Return the maximum area of any island in the grid
   return maxArea;
 };

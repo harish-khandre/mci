@@ -12,13 +12,11 @@ function getLowestUnvisited(seen: boolean[], dists: number[]): number {
     if (seen[i]) {
       continue;
     }
-
     if (lowestDistance > dists[i]) {
       lowestDistance = dists[i];
       idx = i;
     }
   }
-
   return idx;
 }
 
