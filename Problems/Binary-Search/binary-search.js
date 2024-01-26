@@ -15,6 +15,5 @@ const search = (nums, target) => {
       high = mid - 1;
     }
   }
-
   return -1;
 };
