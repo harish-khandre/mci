@@ -5,6 +5,11 @@ const dir = [
   [0, 1],
 ];
 
+declare type Point = {
+  x: number;
+  y: number;
+};
+
 function walk(
   maze: string[],
   wall: string,
@@ -33,7 +38,9 @@ function walk(
   if (seen[curr.y][curr.x]) {
     return false;
   }
-  //3 recurse
+
+  //3 rules
+
   //pre
   seen[curr.y][curr.x] = true;
   path.push(curr);

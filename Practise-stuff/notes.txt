@@ -44,9 +44,9 @@ Stack is LIFO (Last in first out) a --> b --> c --> d
 Queue is FIFO (First in first out)  a <-- b <-- c <-- d
 
 - Trees
- - Binary tree 
-    Pros: 
-    1. Better than O(n)
+- Binary tree 
+Pros: 
+1. Better than O(n)
     2. Ordered
     3. Flexible Size
 
@@ -55,7 +55,7 @@ Queue is FIFO (First in first out)  a <-- b <-- c <-- d
 
     Balanced Trees are best and gives O(log n) operations 
     Unbalanced trees are bad and gives O(n) operations
-    
+
     If you find a lot and insert not often AVL tree and vice versa
     for red black tree
 
@@ -65,9 +65,9 @@ Queue is FIFO (First in first out)  a <-- b <-- c <-- d
 
     Post order => Left, Right, Root.
 
- - Binary Heap 
+    - Binary Heap 
     Pros:
-    1. Better than O(n)
+1. Better than O(n)
     2. Priority
     3. Flexible Size
     4. Fast Insert
@@ -75,7 +75,7 @@ Queue is FIFO (First in first out)  a <-- b <-- c <-- d
     Cons:
     1. Slow Lookup
 
- - Graph
+    - Graph
     Pros: 
     1. Relationships
 
@@ -89,11 +89,11 @@ Queue is FIFO (First in first out)  a <-- b <-- c <-- d
     Weighted graphs shows the weight of data for the actions like google map
     is weighted graph and calculates the direction based on the weight of
     the graph
-    
+
     Connected graphs are connected to every other node
 
     Dag: directed acyclic graph => [[a, d], [b, a], [b, c], [d, c]]
- 
+
     Vice versa for each graph
 
     Node is referred vertex in graph
@@ -101,5 +101,17 @@ Queue is FIFO (First in first out)  a <-- b <-- c <-- d
 
     The way they are represented is adjacent list and adjacent matrix
     adjacent list: [{ to: 1, w: 10}, { to: 2, w:20}] 
-                      (^this is index 0)
+    (^this is index 0)
     and for matrix just google it or https://frontendmasters.com/courses/algorithms/searching-an-adjacency-matrix/
+
+    - Recursion 
+    Pros :
+    1. DRY
+    2. Readability
+
+    Cons:
+    1. Large Stack
+
+    BASE CASEEEEE !!!!!!!!!!!!!!!!!! Is IMPORTANT!
+    Use when there is branching and directional factors like graphs, trees and all as well as when you cant use
+    loops obviously for ex. Like maze solver or tree searching etc.
