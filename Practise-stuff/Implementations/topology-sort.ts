@@ -1,3 +1,7 @@
+// A topological ordering is an ordering of the nodes in a directed graph where for each directed edge from node A to node B, node A appears before node B in the ordering,
+
+// Topological sort algorithm can find a topological ordering in O(V + E) time. And it is only implemented on Directed Acyclic Graph (DAG) as they don't have cycles
+
 class Graph {
   private adjacencyList: Map<number, number[]>;
 

@@ -1,3 +1,5 @@
+// Union Find is used to find the minimum spanning tree of the graph, which is a subset of the edges that connects all of the vertices without creating any cycles.
+
 class UnionFind {
   private parent: number[];
   private rank: number[];
