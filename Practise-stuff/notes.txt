@@ -59,11 +59,15 @@ Pros:
     If you find a lot and insert not often AVL tree and vice versa
     for red black tree
 
-    In order => Left, Root, Right.
+    //     9
+    //  4     20
+    //1  6  15  170
 
-    Pre-order => Root, Left, Right.
+    In order => Left, Root, Right. [ 1, 4, 6, 9, 15, 20, 170 ]
 
-    Post order => Left, Right, Root.
+    Pre-order => Root, Left, Right. [ 9 , 4, 1, 6, 20, 15, 170 ]
+
+    Post order => Left, Right, Root. [ 1, 6, 4, 15, 170, 20, 9  ]
 
     - Binary Heap 
     Pros:
@@ -115,3 +119,66 @@ Pros:
     BASE CASEEEEE !!!!!!!!!!!!!!!!!! Is IMPORTANT!
     Use when there is branching and directional factors like graphs, trees and all as well as when you cant use
     loops obviously for ex. Like maze solver or tree searching etc.
+
+    - Sort 
+
+    1 - Sort 10 schools around your house by distance:
+    insertion sort
+
+    2 - eBay sorts listings by the current Bid amount:
+    radix or counting sort
+
+    3 - Sort scores on ESPN
+    Quick sort
+
+    4 - Massive database (can't fit all into memory) needs to sort through past year's user data
+    Merge Sort
+
+    5 - Almost sorted Udemy review data needs to update and add 2 new reviews
+    Insertion Sort
+
+    6 - Temperature Records for the past 50 years in Canada
+    radix or counting Sort
+    Quick sort if decimal places
+
+    7 - Large user name database needs to be sorted. Data is very random.
+    Quick sort
+      
+    If worst case performance matters more than avg case then dont use Quick Sort instead use Merge Sort as it is
+    stable as well as it always give O(n log (n)) performance although it has space complexity higher than Quick Sort
+
+    - Search
+
+    - BFS:
+    Pros: 
+    1. Shortest path
+    2. Closer Nodes
+
+    Cons:
+    1. More memory
+
+    - DFS:
+    Pros:
+    1. Less memory
+    2. Does path exist?
+
+    Cons:
+    1. Can get slow
+
+    If you know a solution is not far from the root of the tree:
+    BFS
+
+    If the tree is very deep and solutions are rare: 
+    BFS - DFS will be slower
+
+    If the tree is very wide:
+    DFS - BFS will need too much memory, in a queue
+
+    If solutions are frequent but located deep in the tree:
+    DFS
+
+    Determining whether a path exists between two nodes:
+    DFS
+
+    Finding the shortest path:
+    BFS

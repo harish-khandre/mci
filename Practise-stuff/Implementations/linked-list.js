@@ -1,4 +1,4 @@
-// This is expample of Linked List works under the hood
+// This is example of Linked List works under the hood
 
 class LinkedList {
   constructor(value) {
