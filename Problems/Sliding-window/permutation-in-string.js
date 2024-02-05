@@ -38,3 +38,39 @@ const checkInclusion = (s1, s2) => {
   // No permutation found
   return false;
 };
+
+// OR
+
+var checkInclusion2 = function (s1, s2) {
+  const letters = {};
+
+  for (let i = 0; i < s1.length; i++) {
+    letters[s1[i]] = letters[s1[i]] + 1 || 1;
+  }
+
+  let l = 0;
+  let r = 0;
+  let lettersLeft = s1.length;
+
+  while (r < s2.length) {
+    if (!letters[s2[r]]) {
+      while (!letters[s2[r]]) {
+        if (letters[s2[l]] !== undefined) {
+          letters[s2[l]] += 1;
+          lettersLeft += 1;
+        }
+
+        l++;
+        if (l >= r) break;
+      }
+    }
+    if (letters[s2[r]]) {
+      letters[s2[r]] -= 1;
+      lettersLeft -= 1;
+      if (lettersLeft === 0) return true;
+    }
+    r++;
+  }
+
+  return false;
+};
