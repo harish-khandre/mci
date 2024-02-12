@@ -58,6 +58,7 @@ export default class LRU<K, V> {
     if (node.next) {
       node.next.prev = node.prev;
     }
+
     if (this.length === 1) {
       this.tail = this.head = undefined;
     }
