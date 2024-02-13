@@ -1,5 +1,5 @@
 const fibonacciTopDown = () => {
-  let cache = {};
+  let cache = new Array();
   return function fib(n) {
     if (n in cache) {
       return cache[n];
