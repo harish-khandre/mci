@@ -44,141 +44,161 @@ Stack is LIFO (Last in first out) a --> b --> c --> d
 Queue is FIFO (First in first out)  a <-- b <-- c <-- d
 
 - Trees
+
 - Binary tree 
+
 Pros: 
 1. Better than O(n)
-    2. Ordered
-    3. Flexible Size
+  2. Ordered
+  3. Flexible Size
 
-    Cons:
-    1. No O(1) operations
+  Cons:
+  1. No O(1) operations
 
-    Balanced Trees are best and gives O(log n) operations 
-    Unbalanced trees are bad and gives O(n) operations
+  Balanced Trees are best and gives O(log n) operations 
+  Unbalanced trees are bad and gives O(n) operations
 
-    If you find a lot and insert not often AVL tree and vice versa
-    for red black tree
+  If you find a lot and insert not often AVL tree and vice versa
+  for red black tree
 
-    //     9
-    //  4     20
-    //1  6  15  170
+  //     9
+  //  4     20
+  //1  6  15  170
 
-    In order => Left, Root, Right. [ 1, 4, 6, 9, 15, 20, 170 ]
+  In order => Left, Root, Right. [ 1, 4, 6, 9, 15, 20, 170 ]
 
-    Pre-order => Root, Left, Right. [ 9 , 4, 1, 6, 20, 15, 170 ]
+  Pre-order => Root, Left, Right. [ 9 , 4, 1, 6, 20, 15, 170 ]
 
-    Post order => Left, Right, Root. [ 1, 6, 4, 15, 170, 20, 9  ]
+  Post order => Left, Right, Root. [ 1, 6, 4, 15, 170, 20, 9  ]
 
-    - Binary Heap 
-    Pros:
+  - Binary Heap 
+
+  Pros:
 1. Better than O(n)
-    2. Priority
-    3. Flexible Size
-    4. Fast Insert
+  2. Priority
+  3. Flexible Size
+  4. Fast Insert
 
-    Cons:
-    1. Slow Lookup
+  Cons:
+  1. Slow Lookup
 
-    - Graph
-    Pros: 
-    1. Relationships
+  - Graph
 
-    Cons:
-    2. Scaling is hard
+  Pros: 
+  1. Relationships
 
-    Directed graphs shows direction of their relations
+  Cons:
+  2. Scaling is hard
 
-    Cyclic graphs are cyclic as they are continuous 
+  Directed graphs shows direction of their relations
 
-    Weighted graphs shows the weight of data for the actions like google map
-    is weighted graph and calculates the direction based on the weight of
-    the graph
+  Cyclic graphs are cyclic as they are continuous 
 
-    Connected graphs are connected to every other node
+  Weighted graphs shows the weight of data for the actions like google map
+  is weighted graph and calculates the direction based on the weight of
+  the graph
 
-    Dag: directed acyclic graph => [[a, d], [b, a], [b, c], [d, c]]
+  Connected graphs are connected to every other node
 
-    Vice versa for each graph
+  Dag: directed acyclic graph => [[a, d], [b, a], [b, c], [d, c]]
 
-    Node is referred vertex in graph
-    Edge is connection between two vertex
+  Vice versa for each graph
 
-    The way they are represented is adjacent list and adjacent matrix
-    adjacent list: [{ to: 1, w: 10}, { to: 2, w:20}] 
-    (^this is index 0)
-    and for matrix just google it or https://frontendmasters.com/courses/algorithms/searching-an-adjacency-matrix/
+  Node is referred vertex in graph
+  Edge is connection between two vertex
 
-    - Recursion 
-    Pros :
-    1. DRY
-    2. Readability
+  The way they are represented is adjacent list and adjacent matrix
+  adjacent list: [{ to: 1, w: 10}, { to: 2, w:20}] 
+(^this is index 0)
+  and for matrix just google it or 
+  https://frontendmasters.com/courses/algorithms/searching-an-adjacency-matrix/
 
-    Cons:
-    1. Large Stack
+  A spanning tree is a subgraph of an undirected connected graph that contains all of the graph's vertices and edges. A spanning tree is a connected graph that uses all vertices and has no circuits. In other words, there is a path from any vertex to any other vertex, but no circuits
 
-    BASE CASEEEEE !!!!!!!!!!!!!!!!!! Is IMPORTANT!
-    Use when there is branching and directional factors like graphs, trees and all as well as when you cant use
-    loops obviously for ex. Like maze solver or tree searching etc.
+  - Prim's algorithm is a greedy algorithm that finds a minimum spanning tree for a weighted undirected graph. A
+  minimum spanning tree is a subgraph that connects all the vertices in the main graph with the fewest possible
+  edges and minimum cost.
 
-    - Sort 
+  - Kruskal's algorithm is a minimum spanning tree (MST) algorithm that takes a graph as input and finds a subset of the edges of that graph that forms a tree that includes every vertex, where the total weight of all the edges in the tree is minimized. It is a greedy algorithm, meaning that it makes the locally optimal choice at each step, without considering the global impact of those choices.
 
-    1 - Sort 10 schools around your house by distance:
-    insertion sort
+  https://www.youtube.com/watch?v=4ZlRH0eK-qQ&ab_channel=AbdulBari
 
-    2 - eBay sorts listings by the current Bid amount:
-    radix or counting sort
+  - Recursion 
 
-    3 - Sort scores on ESPN
-    Quick sort
+  Pros :
+  1. DRY
+  2. Readability
 
-    4 - Massive database (can't fit all into memory) needs to sort through past year's user data
-    Merge Sort
+  Cons:
+  1. Large Stack
 
-    5 - Almost sorted Udemy review data needs to update and add 2 new reviews
-    Insertion Sort
+  BASE CASEEEEE !!!!!!!!!!!!!!!!!! Is IMPORTANT!
+  Use when there is branching and directional factors like graphs, trees and all as well as when you cant use
+  loops obviously for ex. Like maze solver or tree searching etc.
 
-    6 - Temperature Records for the past 50 years in Canada
-    radix or counting Sort
-    Quick sort if decimal places
+  - Sort 
 
-    7 - Large user name database needs to be sorted. Data is very random.
-    Quick sort
-      
-    If worst case performance matters more than avg case then dont use Quick Sort instead use Merge Sort as it is
-    stable as well as it always give O(n log (n)) performance although it has space complexity higher than Quick Sort
+  1 - Sort 10 schools around your house by distance:
+  insertion sort
 
-    - Search
+  2 - eBay sorts listings by the current Bid amount:
+  radix or counting sort
 
-    - BFS:
-    Pros: 
-    1. Shortest path
-    2. Closer Nodes
+  3 - Sort scores on ESPN
+  Quick sort
 
-    Cons:
-    1. More memory
+  4 - Massive database (can't fit all into memory) needs to sort through past year's user data
+  Merge Sort
 
-    - DFS:
-    Pros:
-    1. Less memory
-    2. Does path exist?
+  5 - Almost sorted Udemy review data needs to update and add 2 new reviews
+  Insertion Sort
 
-    Cons:
-    1. Can get slow
+  6 - Temperature Records for the past 50 years in Canada
+  radix or counting Sort
+  Quick sort if decimal places
 
-    If you know a solution is not far from the root of the tree:
-    BFS
+  7 - Large user name database needs to be sorted. Data is very random.
+  Quick sort
 
-    If the tree is very deep and solutions are rare: 
-    BFS - DFS will be slower
+  If worst case performance matters more than avg case then dont use Quick Sort instead use Merge Sort as it is
+  stable as well as it always give O(n log (n)) performance although it has space complexity higher than Quick Sort
 
-    If the tree is very wide:
-    DFS - BFS will need too much memory, in a queue
+  - Search
 
-    If solutions are frequent but located deep in the tree:
-    DFS
+  - BFS:
 
-    Determining whether a path exists between two nodes:
-    DFS
+  Pros: 
+  1. Shortest path
+  2. Closer Nodes
 
-    Finding the shortest path:
-    BFS
+  Cons:
+  1. More memory
+
+  - DFS:
+
+  Pros:
+  1. Less memory
+  2. Does path exist?
+
+  Cons:
+  1. Can get slow
+
+  If you know a solution is not far from the root of the tree:
+  BFS
+
+  If the tree is very deep and solutions are rare: 
+  BFS - DFS will be slower
+
+  If the tree is very wide:
+  DFS - BFS will need too much memory, in a queue
+
+  If solutions are frequent but located deep in the tree:
+  DFS
+
+  Determining whether a path exists between two nodes:
+  DFS
+
+  Finding the shortest path:
+  BFS
+
+
