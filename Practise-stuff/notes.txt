@@ -107,19 +107,22 @@ Pros:
   Node is referred vertex in graph
   Edge is connection between two vertex
 
-  The way they are represented is adjacent list and adjacent matrix
-  adjacent list: [{ to: 1, w: 10}, { to: 2, w:20}] 
-(^this is index 0)
-  and for matrix just google it or 
+  The way they are represented is adjacent list and adjacent matrix adjacent list: [{ to: 1, w: 10}, { to: 2,
+  w:20}] (^this is index 0) and for matrix just google it or 
   https://frontendmasters.com/courses/algorithms/searching-an-adjacency-matrix/
 
-  A spanning tree is a subgraph of an undirected connected graph that contains all of the graph's vertices and edges. A spanning tree is a connected graph that uses all vertices and has no circuits. In other words, there is a path from any vertex to any other vertex, but no circuits
+  A spanning tree is a subgraph of an undirected connected graph that contains all of the graph's vertices and
+  edges. A spanning tree is a connected graph that uses all vertices and has no circuits. In other words, there is
+  a path from any vertex to any other vertex, but no circuits
 
   - Prim's algorithm is a greedy algorithm that finds a minimum spanning tree for a weighted undirected graph. A
   minimum spanning tree is a subgraph that connects all the vertices in the main graph with the fewest possible
   edges and minimum cost.
 
-  - Kruskal's algorithm is a minimum spanning tree (MST) algorithm that takes a graph as input and finds a subset of the edges of that graph that forms a tree that includes every vertex, where the total weight of all the edges in the tree is minimized. It is a greedy algorithm, meaning that it makes the locally optimal choice at each step, without considering the global impact of those choices.
+  - Kruskal's algorithm is a minimum spanning tree (MST) algorithm that takes a graph as input and finds a subset
+    of the edges of that graph that forms a tree that includes every vertex, where the total weight of all the
+    edges in the tree is minimized. It is a greedy algorithm, meaning that it makes the locally optimal choice at
+    each step, without considering the global impact of those choices.
 
   https://www.youtube.com/watch?v=4ZlRH0eK-qQ&ab_channel=AbdulBari
 
