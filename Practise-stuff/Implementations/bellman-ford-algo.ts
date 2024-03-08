@@ -1,3 +1,5 @@
+/* The Bellman-Ford algorithm is a graph search algorithm that finds the shortest path from a single source vertex to all other vertices in a graph. */
+
 class Graph {
   // Represents a directed graph with weighted edges
 
