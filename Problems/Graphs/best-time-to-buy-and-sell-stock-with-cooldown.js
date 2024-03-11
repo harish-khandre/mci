@@ -27,3 +27,38 @@ const maxProfit = (prices) => {
   // Return the maximum profit that can be achieved
   return sell;
 };
+
+// another solution
+
+const _maxProfit = (prices) => {
+  if (prices.length <= 1) return 0;
+
+  const memo = new Map();
+  return dp(prices, 0, 0, 0, memo);
+};
+
+const dp = (prices, i, buy, sell, memo) => {
+  const key = `${i},${buy},${sell}`;
+  if (memo.has(key)) return memo.get(key);
+
+  if (i >= prices.length) return 0;
+
+  let profit = 0;
+  if (buy === 0) {
+    // No stock, no profit
+    profit = Math.max(profit, dp(prices, i + 1, 0, 0, memo));
+    // Buy stock
+    profit = Math.max(profit, -prices[i] + dp(prices, i + 1, 1, 0, memo));
+  } else if (buy === 1) {
+    // Keep stock
+    profit = Math.max(profit, dp(prices, i + 1, 1, sell, memo));
+    // Sell stock
+    profit = Math.max(profit, prices[i] + dp(prices, i + 1, 0, sell + 1, memo));
+  } else {
+    // Cooldown day after selling
+    profit = Math.max(profit, dp(prices, i + 1, 0, 0, memo));
+  }
+
+  memo.set(key, profit);
+  return profit;
+};
