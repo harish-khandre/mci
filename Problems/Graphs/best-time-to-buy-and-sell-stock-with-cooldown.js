@@ -28,7 +28,7 @@ const maxProfit = (prices) => {
   return sell;
 };
 
-// another solution
+// another solution with memoization
 
 const _maxProfit = (prices) => {
   if (prices.length <= 1) return 0;
