@@ -25,3 +25,62 @@ const change = (amount, coins) => {
   // dp[amount] will contain the total number of ways to make change for the given amount
   return dp[amount];
 };
+
+// top down - memoization
+
+var _change = (
+  amount,
+  coins,
+  n = coins.length,
+  memo = initMemo(coins, amount),
+) => {
+  const isBaseCase1 = n === 0;
+  if (isBaseCase1) return 0;
+
+  const isBaseCase2 = amount === 0;
+  if (isBaseCase2) return 1;
+
+  const hasSeen = memo[n][amount] !== null;
+  if (hasSeen) return memo[n][amount];
+
+  return dfs(
+    amount,
+    coins,
+    n,
+    memo,
+  ); /* Time O(N * AMOUNT) | Space O((N * AMOUNT) + HEIGHT) */
+};
+
+var initMemo = (coins, amount) =>
+  new Array(coins.length + 2)
+    .fill()
+    .map(() => new Array(amount + 2).fill(null));
+
+var dfs = (amount, coins, n, memo) => {
+  const isLess = amount < coins[n - 1];
+  if (isLess) {
+    memo[n][amount] = change(
+      amount,
+      coins,
+      n - 1,
+      memo,
+    ); /* Time O(N * AMOUNT) | Space O(HEIGHT) */
+    return memo[n][amount];
+  }
+
+  const left = change(
+    amount - coins[n - 1],
+    coins,
+    n,
+    memo,
+  ); /* Time O(N * AMOUNT) | Space O(HEIGHT) */
+  const right = change(
+    amount,
+    coins,
+    n - 1,
+    memo,
+  ); /* Time O(N * AMOUNT) | Space O(HEIGHT) */
+
+  memo[n][amount] = left + right; /*                    | Space O(N * AMOUNT) */
+  return memo[n][amount];
+};
