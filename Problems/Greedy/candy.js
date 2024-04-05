@@ -10,7 +10,6 @@ const candy = (ratings) => {
       candies[i] = candies[i - 1] + 1;
     }
   }
-
   // Second pass: Traverse from right to left, while simultaneously updating the maximum number of candies
   let totalCandies = candies[n - 1]; // Initialize with the last element
   let extraCandies = 0;
