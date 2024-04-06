@@ -12,7 +12,6 @@ const candy = (ratings) => {
   }
   // Second pass: Traverse from right to left, while simultaneously updating the maximum number of candies
   let totalCandies = candies[n - 1]; // Initialize with the last element
-  let extraCandies = 0;
   for (let i = n - 2; i >= 0; i--) {
     // If the current child's rating is greater than the next one,
     // update the current child's number of candies to be the maximum of its current value and one more than the next child.
