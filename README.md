@@ -9,8 +9,3 @@ This repository is designed to help you excel in coding interviews with:
 - **Algorithms**: Sorting, Searching, Dynamic Programming, Backtracking, Divide and Conquer.  
 - **Coding Problems**: Easy, Medium, and Hard challenges.  
 
-## Getting Started  
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/yourusername/master-coding-interview.git
-   cd master-coding-interview
